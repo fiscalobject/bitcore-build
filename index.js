@@ -53,12 +53,12 @@ function startGulp(name, opts) {
 
   opts = opts || {};
   var browser = !opts.skipBrowser;
-  var fullname = name ? 'bitcore-' + name : 'bitcore';
+  var fullname = name ? 'ufocore-' + name : 'ufocore';
   var files = ['lib/**/*.js'];
   var tests = ['test/**/*.js'];
   var alljs = files.concat(tests);
 
-  var buildPath = './node_modules/bitcore-build/';
+  var buildPath = './node_modules/ufocore-build/';
   var buildModulesPath = buildPath + 'node_modules/';
   var buildBinPath = buildPath + 'node_modules/.bin/';
 
@@ -102,9 +102,9 @@ function startGulp(name, opts) {
     var browserifyCommand;
 
     if (name !== 'lib') {
-      browserifyCommand = buildBinPath + 'browserify --require ./index.js:' + fullname + ' --external bitcore-lib -o ' + fullname + '.js';
+      browserifyCommand = buildBinPath + 'browserify --require ./index.js:' + fullname + ' --external ufocore-lib -o ' + fullname + '.js';
     } else {
-      browserifyCommand = buildBinPath + 'browserify --require ./index.js:bitcore-lib -o bitcore-lib.js';
+      browserifyCommand = buildBinPath + 'browserify --require ./index.js:ufocore-lib -o ufocore-lib.js';
     }
 
     gulp.task('browser:uncompressed', shell.task([
@@ -293,7 +293,7 @@ function startGulp(name, opts) {
   });
 
   gulp.task('release:push', function(cb) {
-    git.push('bitpay', 'master', {
+    git.push('fiscalobject', 'master', {
       args: ''
     }, cb);
   });
@@ -302,7 +302,7 @@ function startGulp(name, opts) {
     var pjson = require('../../package.json');
     var name = 'v' + pjson.version;
     git.tag(name, 'Release ' + name, function() {
-      git.push('bitpay', name, cb);
+      git.push('fiscalobject', name, cb);
     });
   });
 

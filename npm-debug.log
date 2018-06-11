@@ -1,0 +1,121 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'publish' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/bitcore/github/ufocore-build',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/bitcore/.npm/bitcore-build/0.5.4/package.tgz not in flight; packing
+9 info lifecycle bitcore-build@0.5.4~prepublish: bitcore-build@0.5.4
+10 silly lifecycle bitcore-build@0.5.4~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/home/bitcore/.npm/bitcore-build/0.5.4/package.tgz',
+11 verbose tar pack   '/home/bitcore/github/ufocore-build' ]
+12 verbose tarball /home/bitcore/.npm/bitcore-build/0.5.4/package.tgz
+13 verbose folder /home/bitcore/github/ufocore-build
+14 verbose addLocalTarball adding from inside cache /home/bitcore/.npm/bitcore-build/0.5.4/package.tgz
+15 silly cache afterAdd bitcore-build@0.5.4
+16 verbose afterAdd /home/bitcore/.npm/bitcore-build/0.5.4/package/package.json not in flight; writing
+17 verbose afterAdd /home/bitcore/.npm/bitcore-build/0.5.4/package/package.json written
+18 silly publish { name: 'bitcore-build',
+18 silly publish   version: '0.5.4',
+18 silly publish   description: 'A helper for common tasks to build bitcore modules\'',
+18 silly publish   main: 'index.js',
+18 silly publish   scripts: { test: 'gulp test' },
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git://github.com/bitpay/bitcore-build.git' },
+18 silly publish   keywords: [ 'bitcore' ],
+18 silly publish   contributors:
+18 silly publish    [ { name: 'Esteban Ordano', email: 'esteban@bitpay.com' },
+18 silly publish      { name: 'Manuel Araoz', email: 'maraoz@bitpay.com' },
+18 silly publish      { name: 'Braydon Fuller', email: 'braydon@bitpay.com' },
+18 silly publish      { name: 'Yemel Jardi', email: 'yemel@bitpay.com' } ],
+18 silly publish   license: 'MIT',
+18 silly publish   bugs: { url: 'https://github.com/bitpay/bitcore-build/issues' },
+18 silly publish   homepage: 'https://github.com/bitpay/bitcore-build',
+18 silly publish   dependencies:
+18 silly publish    { brfs: '^1.2.0',
+18 silly publish      browserify: '~13.1.0',
+18 silly publish      chai: '~1.10.0',
+18 silly publish      gulp: '^3.8.10',
+18 silly publish      'gulp-bump': '^0.1.11',
+18 silly publish      'gulp-coveralls': '^0.1.3',
+18 silly publish      'gulp-git': '^0.5.5',
+18 silly publish      'gulp-jshint': '^1.9.0',
+18 silly publish      'gulp-mocha': '^2.0.0',
+18 silly publish      'gulp-rename': '^1.2.0',
+18 silly publish      'gulp-shell': '^0.2.10',
+18 silly publish      'gulp-uglify': '^1.0.2',
+18 silly publish      'gulp-util': '=3.0.1',
+18 silly publish      istanbul: '^0.3.5',
+18 silly publish      karma: '^0.12.28',
+18 silly publish      'karma-chrome-launcher': '^0.1.8',
+18 silly publish      'karma-detect-browsers': '^2.0.0',
+18 silly publish      'karma-firefox-launcher': '^0.1.4',
+18 silly publish      'karma-mocha': '^0.1.9',
+18 silly publish      lodash: '^2.4.1',
+18 silly publish      mocha: '^2.0.1',
+18 silly publish      plato: '^1.3.0',
+18 silly publish      'run-sequence': '^1.0.2',
+18 silly publish      zuul: '1.16.3' },
+18 silly publish   readme: '# bitcore-build\n\nA helper to add tasks to gulp.\n\n## Getting started\n\nInstall with:\n\n```sh\nnpm install bitcore-build\n```\n\nand use and require in your gulp file: \n\n```javascript\nvar gulp = require(\'gulp\');\nvar bitcoreTasks = require(\'bitcore-build\');\n\nbitcoreTasks(\'submodule\');\ngulp.task(\'default\', [\'lint\', \'test\', \'browser\', \'coverage\']);\n```\n\n### Notes\n\n* There\'s no default task to allow for each submodule to set up their own configuration\n* If the module is node-only, avoid adding the browser tasks with:\n```javascript\nvar bitcoreTasks = require(\'bitcore-build\');\nbitcoreTasks(\'submodule\', {skipBrowsers: true});\n```\n\n## Contributing\n\nSee [CONTRIBUTING.md](https://github.com/bitpay/bitcore) on the main bitcore repo for information about how to contribute.\n\n## License\n\nCode released under [the MIT license](https://github.com/bitpay/bitcore/blob/master/LICENSE).\n\nCopyright 2015 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.\n\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: '265a231820c5daef645e700b9d70b28f4e02d9bb',
+18 silly publish   _id: 'bitcore-build@0.5.4',
+18 silly publish   _shasum: 'c50f8c129106d8ee194527498fabdf060042cb6e',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name bitcore-build
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/bitcore-build
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /home/bitcore/.npm/bitcore-build/0.5.4/package.tgz
+26 verbose request uri https://registry.npmjs.org/bitcore-build
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 10:38:19 AM
+29 verbose request using bearer token for auth
+30 verbose request id 1fd06ec265a2ab49
+31 http request PUT https://registry.npmjs.org/bitcore-build
+32 http 403 https://registry.npmjs.org/bitcore-build
+33 verbose headers { date: 'Mon, 11 Jun 2018 10:38:20 GMT',
+33 verbose headers   'content-type': 'application/json',
+33 verbose headers   'transfer-encoding': 'chunked',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'set-cookie':
+33 verbose headers    [ '__cfduid=d1151449fc83dd1ac6ddcc46e5cbc9a311528713500; expires=Tue, 11-Jun-19 10:38:20 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+33 verbose headers   'cf-ray': '4293728f1c0b69d1-LHR',
+33 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+33 verbose headers   server: 'cloudflare',
+33 verbose headers   'content-encoding': 'gzip' }
+34 verbose request invalidating /home/bitcore/.npm/registry.npmjs.org/bitcore-build on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: You do not have permission to publish "bitcore-build". Are you logged in as the correct user? : bitcore-build
+36 verbose stack     at makeError (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+36 verbose stack     at /usr/share/npm/node_modules/npm-registry-client/lib/request.js:178:7
+36 verbose stack     at Gunzip.onEnd (zlib.js:131:5)
+36 verbose stack     at emitNone (events.js:111:20)
+36 verbose stack     at Gunzip.emit (events.js:208:7)
+36 verbose stack     at endReadableNT (_stream_readable.js:1064:12)
+36 verbose stack     at _combinedTickCallback (internal/process/next_tick.js:138:11)
+36 verbose stack     at process._tickCallback (internal/process/next_tick.js:180:9)
+37 verbose statusCode 403
+38 verbose pkgid bitcore-build
+39 verbose cwd /home/bitcore/github/ufocore-build
+40 error Linux 4.15.0-22-generic
+41 error argv "/usr/bin/node" "/usr/bin/npm" "publish"
+42 error node v8.10.0
+43 error npm  v3.5.2
+44 error code E403
+45 error You do not have permission to publish "bitcore-build". Are you logged in as the correct user? : bitcore-build
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]
